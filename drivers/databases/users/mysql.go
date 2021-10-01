@@ -1,7 +1,7 @@
 package users
 
 import (
-	"book_crud_ca/bussiness/users"
+	"book_crud_ca/bussinesses/users"
 	"context"
 	"gorm.io/gorm"
 )

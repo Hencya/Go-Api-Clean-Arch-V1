@@ -1,7 +1,7 @@
 package users
 
 import (
-	"book_crud_ca/bussiness"
+	"book_crud_ca/bussinesses"
 	"book_crud_ca/helper/encrypt"
 	"context"
 	"strings"
@@ -13,7 +13,7 @@ type userUseCase struct {
 	contextTimeout time.Duration
 }
 
-func NewUserUseCase(repoUser Repository) UseCase {
+func NewUserUsecase(repoUser Repository, timeout time.Duration) UseCase {
 	return &userUseCase{
 		Repository: repoUser,
 	}
@@ -31,12 +31,12 @@ func (uc *userUseCase) Register(ctx context.Context, userDomain *Domain) error {
 	}
 
 	if existedUser != (Domain{}) {
-		return bussiness.ErrDuplicateData
+		return bussinesses.ErrDuplicateData
 	}
 
 	userDomain.Password, err = encrypt.Hash(userDomain.Password)
 	if err != nil {
-		return bussiness.ErrInternalServer
+		return bussinesses.ErrInternalServer
 	}
 
 	if errInsert := uc.Repository.Insert(ctx, userDomain); errInsert != nil {

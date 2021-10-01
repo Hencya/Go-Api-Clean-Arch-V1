@@ -1,6 +1,6 @@
 package request
 
-import "book_crud_ca/bussiness/users"
+import "book_crud_ca/bussinesses/users"
 
 type Users struct {
 	Username string `json:"username"`

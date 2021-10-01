@@ -1,0 +1,14 @@
+{
+  "debug": true,
+  "server": {
+    "address": ":8080"
+  },
+  "context": {
+    "timeout": 2
+  },
+  "database": {
+    "user": "root",
+    "pass": "root",
+    "name": "rent_book_arc"
+  }
+}

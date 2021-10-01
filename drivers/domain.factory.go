@@ -1,8 +1,8 @@
-package driver
+package drivers
 
 import (
-	"book_crud_ca/bussiness/users"
-	usersDB "book_crud_ca/driver/databases/users"
+	"book_crud_ca/bussinesses/users"
+	usersDB "book_crud_ca/drivers/databases/users"
 	"gorm.io/gorm"
 )
 

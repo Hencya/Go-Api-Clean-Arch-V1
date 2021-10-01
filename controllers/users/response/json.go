@@ -1,7 +1,7 @@
 package response
 
 import (
-	"book_crud_ca/bussiness/users"
+	"book_crud_ca/bussinesses/users"
 	"time"
 )
 

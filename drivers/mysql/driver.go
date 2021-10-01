@@ -10,17 +10,13 @@ import (
 type ConfigDB struct {
 	DB_Username string
 	DB_Password string
-	DB_Host     string
-	DB_Port     string
 	DB_Database string
 }
 
 func (config *ConfigDB) InitDB() *gorm.DB {
-	dsn := fmt.Sprintf("%v:%v@tcp(%v:%v)/%v?charset=utf8mb4&parseTime=True&loc=Local",
+	dsn := fmt.Sprintf("%s:%s@/%s?charset=utf8&parseTime=True&loc=Local",
 		config.DB_Username,
 		config.DB_Password,
-		config.DB_Host,
-		config.DB_Port,
 		config.DB_Database,
 	)
 
